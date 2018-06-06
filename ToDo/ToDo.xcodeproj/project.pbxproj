@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		A03D41C120C778DD009A6E8F /* ToDoItemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D41C020C778DD009A6E8F /* ToDoItemTests.swift */; };
-		A03D41C320C77C3E009A6E8F /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D41C220C77C3E009A6E8F /* ToDoItem.swift */; };
-		A03D41C520C783E7009A6E8F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D41C420C783E7009A6E8F /* Location.swift */; };
 		A03D41C720C78BF6009A6E8F /* ItemManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D41C620C78BF6009A6E8F /* ItemManagerTests.swift */; };
-		A03D41C920C78CAA009A6E8F /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D41C820C78CAA009A6E8F /* ItemManager.swift */; };
 		A03D41CB20C7CD25009A6E8F /* LocationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D41CA20C7CD25009A6E8F /* LocationTest.swift */; };
+		A03D41D220C7D388009A6E8F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D41CF20C7D388009A6E8F /* Location.swift */; };
+		A03D41D320C7D388009A6E8F /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D41D020C7D388009A6E8F /* ToDoItem.swift */; };
+		A03D41D420C7D388009A6E8F /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A03D41D120C7D388009A6E8F /* ItemManager.swift */; };
 		A08715BE20C75383003B620E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08715BD20C75383003B620E /* AppDelegate.swift */; };
 		A08715C020C75383003B620E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08715BF20C75383003B620E /* ViewController.swift */; };
 		A08715C320C75383003B620E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08715C120C75383003B620E /* Main.storyboard */; };
@@ -33,11 +33,11 @@
 
 /* Begin PBXFileReference section */
 		A03D41C020C778DD009A6E8F /* ToDoItemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItemTests.swift; sourceTree = "<group>"; };
-		A03D41C220C77C3E009A6E8F /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
-		A03D41C420C783E7009A6E8F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		A03D41C620C78BF6009A6E8F /* ItemManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManagerTests.swift; sourceTree = "<group>"; };
-		A03D41C820C78CAA009A6E8F /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		A03D41CA20C7CD25009A6E8F /* LocationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTest.swift; sourceTree = "<group>"; };
+		A03D41CF20C7D388009A6E8F /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		A03D41D020C7D388009A6E8F /* ToDoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		A03D41D120C7D388009A6E8F /* ItemManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 		A08715BA20C75383003B620E /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08715BD20C75383003B620E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A08715BF20C75383003B620E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +68,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A03D41CE20C7D388009A6E8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A03D41CF20C7D388009A6E8F /* Location.swift */,
+				A03D41D020C7D388009A6E8F /* ToDoItem.swift */,
+				A03D41D120C7D388009A6E8F /* ItemManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A03D41D520C7D598009A6E8F /* Model Test */ = {
+			isa = PBXGroup;
+			children = (
+				A03D41C020C778DD009A6E8F /* ToDoItemTests.swift */,
+				A03D41C620C78BF6009A6E8F /* ItemManagerTests.swift */,
+				A03D41CA20C7CD25009A6E8F /* LocationTest.swift */,
+			);
+			path = "Model Test";
+			sourceTree = "<group>";
+		};
 		A08715B120C75383003B620E = {
 			isa = PBXGroup;
 			children = (
@@ -89,11 +109,9 @@
 		A08715BC20C75383003B620E /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				A03D41CE20C7D388009A6E8F /* Model */,
 				A08715BD20C75383003B620E /* AppDelegate.swift */,
 				A08715BF20C75383003B620E /* ViewController.swift */,
-				A03D41C220C77C3E009A6E8F /* ToDoItem.swift */,
-				A03D41C420C783E7009A6E8F /* Location.swift */,
-				A03D41C820C78CAA009A6E8F /* ItemManager.swift */,
 				A08715C120C75383003B620E /* Main.storyboard */,
 				A08715C420C75385003B620E /* Assets.xcassets */,
 				A08715C620C75385003B620E /* LaunchScreen.storyboard */,
@@ -106,9 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				A08715D220C75385003B620E /* ToDoTests.swift */,
-				A03D41C020C778DD009A6E8F /* ToDoItemTests.swift */,
-				A03D41C620C78BF6009A6E8F /* ItemManagerTests.swift */,
-				A03D41CA20C7CD25009A6E8F /* LocationTest.swift */,
+				A03D41D520C7D598009A6E8F /* Model Test */,
 				A08715D420C75385003B620E /* Info.plist */,
 			);
 			path = ToDoTests;
@@ -216,10 +232,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A08715C020C75383003B620E /* ViewController.swift in Sources */,
-				A03D41C920C78CAA009A6E8F /* ItemManager.swift in Sources */,
+				A03D41D420C7D388009A6E8F /* ItemManager.swift in Sources */,
+				A03D41D220C7D388009A6E8F /* Location.swift in Sources */,
+				A03D41D320C7D388009A6E8F /* ToDoItem.swift in Sources */,
 				A08715BE20C75383003B620E /* AppDelegate.swift in Sources */,
-				A03D41C520C783E7009A6E8F /* Location.swift in Sources */,
-				A03D41C320C77C3E009A6E8F /* ToDoItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
