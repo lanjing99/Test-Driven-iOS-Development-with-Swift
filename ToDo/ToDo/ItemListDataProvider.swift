@@ -3,23 +3,41 @@
 //  *@文件名称:  ItemListDataProvider.swift
 //  *@Date 2018/6/6
 //  *@Author lanjing 
-//  *@Copyright © :  2014-2018 X-Financial Inc.   All rights reserved.
-//  *注意：本内容仅限于小赢科技有限责任公内部传阅，禁止外泄以及用于其他的商业目的。
 //
 
 import UIKit
+enum Section: Int{
+    case toDo
+    case done
+}
+
 
 class ItemListDataProvider: NSObject {
+    let itemManager = ItemManager.init()
 
 }
 
 extension ItemListDataProvider: UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 100
+        guard let itemSection = Section(rawValue: section) else{
+            fatalError()
+        }
+        
+        switch itemSection {
+        case .toDo:
+            return itemManager.toDoCount
+        case .done:
+            return itemManager.doneCount
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell.init()
+        return ItemCell.init()
     }
 }
 
