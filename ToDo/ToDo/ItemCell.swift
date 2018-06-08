@@ -10,7 +10,7 @@
 import UIKit
 
 class ItemCell: UITableViewCell {
-
+    var item: ToDoItem?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -22,4 +22,8 @@ class ItemCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func bindData(_ item: ToDoItem){
+        self.item = item
+        textLabel?.text = item.title
+    }
 }

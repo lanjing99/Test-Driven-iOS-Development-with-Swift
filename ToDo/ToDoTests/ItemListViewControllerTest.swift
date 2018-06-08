@@ -11,11 +11,13 @@ import XCTest
 class ItemListViewControllerTest: XCTestCase {
     
     var itemListViewController: ItemListViewController!
+    var tableView: UITableView!
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         let sb = UIStoryboard(name: "Main", bundle: nil)
         itemListViewController = sb.instantiateInitialViewController() as! ItemListViewController
+        tableView = itemListViewController.tableView
     }
     
     override func tearDown() {
