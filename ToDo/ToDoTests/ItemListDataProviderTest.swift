@@ -20,7 +20,7 @@ extension ItemListDataProviderTest{
     
     class MockItemCell: ItemCell{
         var configCellGotCalled = false
-        override func bindData(_ item: ToDoItem){
+        override func bindData(_ item: ToDoItem, checked: Bool = false){
             super.bindData(item)
             configCellGotCalled = true
         }

@@ -3,13 +3,12 @@
 //  *@文件名称:  ItemCell.swift
 //  *@Date 2018/6/7
 //  *@Author lanjing 
-//  *@Copyright © :  2014-2018 X-Financial Inc.   All rights reserved.
-//  *注意：本内容仅限于小赢科技有限责任公内部传阅，禁止外泄以及用于其他的商业目的。
 //
 
 import UIKit
 
 class ItemCell: UITableViewCell {
+    @IBOutlet var titleLabel: UILabel!
     var item: ToDoItem?
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,8 +21,13 @@ class ItemCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
-    func bindData(_ item: ToDoItem){
+    func bindData(_ item: ToDoItem, checked: Bool = false){
         self.item = item
-        textLabel?.text = item.title
+        if checked {
+            let at = NSAttributedString.init(string: item.title, attributes: [NSAttributedStringKey.strikethroughStyle:NSUnderlineStyle.styleSingle])
+            titleLabel?.attributedText = at
+        }else{
+            titleLabel?.text = item.title
+        }
     }
 }
