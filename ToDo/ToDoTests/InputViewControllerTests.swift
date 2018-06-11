@@ -7,6 +7,8 @@
 
 import XCTest
 import UIKit
+import CoreLocation
+
 @testable import ToDo
 
 class InputViewControllerTests: XCTestCase {
@@ -32,4 +34,30 @@ class InputViewControllerTests: XCTestCase {
         XCTAssertTrue(actions.contains("save:"))
     }
     
+    func test_Geocoder_FetchesCoordinates() {
+        let address = "Infinite Loop 1, Cupertino"
+        let expect = expectation(description: "Geocoder")
+        CLGeocoder().geocodeAddressString(address) {
+                (placemarks, error) -> Void in
+            
+            if error != nil {
+                 expect.fulfill()
+                return
+            }
+            let coordinate = placemarks?.first?.location?.coordinate
+            guard let latitude = coordinate?.latitude else {
+                    XCTFail()
+                    return
+                
+            }
+            guard let longitude =  coordinate?.longitude else {
+                    XCTFail()
+                    return
+            }
+            XCTAssertEqual(latitude, 37.3316, accuracy: 0.001)
+            XCTAssertEqual(longitude, -122.0300, accuracy: 0.001)
+            expect.fulfill()
+        }
+        waitForExpectations(timeout: 3, handler: nil)
+    }
 }
