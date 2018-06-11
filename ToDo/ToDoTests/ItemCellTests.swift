@@ -54,7 +54,7 @@ class ItemCellTests: XCTestCase {
     func testCellTitle(){
         let item = ToDoItem.init(title: "TODO")
         cell.bindData(item)
-        XCTAssertEqual(cell.textLabel?.text, "TODO")
+        XCTAssertEqual(cell.titleLabel?.text, "TODO")
     }
     
     func testCheckedCellTitle(){

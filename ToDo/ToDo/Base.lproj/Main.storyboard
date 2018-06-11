@@ -71,5 +71,51 @@
             </objects>
             <point key="canvasLocation" x="85.599999999999994" y="33.733133433283363"/>
         </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Qyr-8J-IDB">
+            <objects>
+                <viewController storyboardIdentifier="DetailViewController" id="jHh-GC-25l" customClass="DetailViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fhk-cm-wjW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zh5-WL-50A"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWk-PD-ykB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="801" y="28"/>
+        </scene>
+        <!--Input View Controller-->
+        <scene sceneID="eOo-Bp-W3p">
+            <objects>
+                <viewController storyboardIdentifier="InputViewController" id="rGb-4a-lTy" customClass="InputViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rme-Cb-KXj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQK-1t-96P">
+                                <rect key="frame" x="170" y="318.5" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save:" destination="rGb-4a-lTy" eventType="touchUpInside" id="eJi-a3-8KO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dQK-1t-96P" firstAttribute="centerY" secondItem="rme-Cb-KXj" secondAttribute="centerY" id="ZNI-XM-cBP"/>
+                            <constraint firstItem="dQK-1t-96P" firstAttribute="centerX" secondItem="rme-Cb-KXj" secondAttribute="centerX" id="dVl-p6-Blx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZHV-Ar-5Ig"/>
+                    </view>
+                    <connections>
+                        <outlet property="saveButton" destination="dQK-1t-96P" id="xwq-oE-1P6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6JX-N2-C9G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1647" y="30"/>
+        </scene>
     </scenes>
 </document>
