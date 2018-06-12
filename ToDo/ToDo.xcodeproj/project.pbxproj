@@ -31,6 +31,7 @@
 		A08715D320C75385003B620E /* ToDoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08715D220C75385003B620E /* ToDoTests.swift */; };
 		A0CEA8FE20CE729800095C2E /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CEA8FD20CE729800095C2E /* APIClient.swift */; };
 		A0CEA90020CE72C200095C2E /* APIClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CEA8FF20CE72C200095C2E /* APIClientTest.swift */; };
+		A0CEA90220CF583300095C2E /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CEA90120CF583300095C2E /* Token.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		A08715D420C75385003B620E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0CEA8FD20CE729800095C2E /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		A0CEA8FF20CE72C200095C2E /* APIClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTest.swift; sourceTree = "<group>"; };
+		A0CEA90120CF583300095C2E /* Token.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				A08715C620C75385003B620E /* LaunchScreen.storyboard */,
 				A08715C920C75385003B620E /* Info.plist */,
 				A0CEA8FD20CE729800095C2E /* APIClient.swift */,
+				A0CEA90120CF583300095C2E /* Token.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				A03D41E720CE21B8009A6E8F /* DetailViewController.swift in Sources */,
 				A03D41EB20CE569B009A6E8F /* InputViewController.swift in Sources */,
 				A03D41E120C91499009A6E8F /* ItemCell.swift in Sources */,
+				A0CEA90220CF583300095C2E /* Token.swift in Sources */,
 				A08715C020C75383003B620E /* ViewController.swift in Sources */,
 				A03D41DD20C7E072009A6E8F /* ItemListDataProvider.swift in Sources */,
 				A0CEA8FE20CE729800095C2E /* APIClient.swift in Sources */,
