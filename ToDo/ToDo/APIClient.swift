@@ -21,7 +21,7 @@ class APIClient: NSObject {
        let task = urlSession?.dataTask(with: url, completionHandler: { (data, response, error) in
         guard let data = data, let tempDic = try? JSONSerialization.jsonObject(with: data, options:JSONSerialization.ReadingOptions.allowFragments),
                 let dic = tempDic as? [String:String], let tokenID = dic["token"] else{
-                    completion(nil, NSError.init())
+                    completion(nil, NSError(domain: "Network", code: -1, userInfo: nil))
                     return
         }
             let token = Token.init(id: tokenID)

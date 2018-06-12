@@ -96,5 +96,22 @@ class APIClientTest: XCTestCase {
         }
     }
     
+    func testLoginUserReturnBadJSON(){
+        mockURLSession = MockURLSession.init(data: nil, urlResponse: nil, error: nil)
+        API.urlSession = mockURLSession
+        
+        let expect = expectation(description: "login")
+        var expectError: Error? = nil
+        var expectToken: Token? = nil
+        API.loginUser(withUserName: "abcd", password: "1234") { (token, error) in
+            expectError = error
+            expectToken = token
+            expect.fulfill()
+        }
+        waitForExpectations(timeout: 1.0) { (error) in
+            XCTAssertNotNil(expectError)
+            XCTAssertNil(expectToken)
+        }
+    }
     
 }
